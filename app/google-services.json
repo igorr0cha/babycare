@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "674641182686",
+    "project_id": "babycare-c4ade",
+    "storage_bucket": "babycare-c4ade.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674641182686:android:f06dc315bf1803da87a74f",
+        "android_client_info": {
+          "package_name": "com.mera.babycare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674641182686-0a8dhcug95s8vgif31l63l9l56f35rkm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mera.babycare",
+            "certificate_hash": "6cad4bc450b8bdf963c04723dcfd34729fdafeb4"
+          }
+        },
+        {
+          "client_id": "674641182686-ik34jnmi94qq8q9cv5brg462otdsumq6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mera.babycare",
+            "certificate_hash": "ea0f2cc6c90ce93b24ed9d3576b7dfe219e2f03e"
+          }
+        },
+        {
+          "client_id": "674641182686-qovjtnhrpm5uu1dte0a392o7p2rm7mdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaA-3q3jaw9bjozoijt2ewpAbr-B0JH3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674641182686-pmcgjhkve1vc0uag99bb4s6rd8ic3ft0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
