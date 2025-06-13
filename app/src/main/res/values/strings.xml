@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BabyCare</string>
+    <string name="signin"><![CDATA[This is an <u>underline</u>.]]></string>
     <string name="default_web_client_id">674641182686-qovjtnhrpm5uu1dte0a392o7p2rm7mdq.apps.googleusercontent.com</string>
 </resources>

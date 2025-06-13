@@ -1,5 +1,6 @@
 package com.mera.babycare
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -29,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         googleSignInButton.setOnClickListener {
             signInWithGoogle()
         }
+
+        val intent = Intent(this, Login::class.java)
+        startActivity(intent)
     }
 
     private fun signInWithGoogle() {
