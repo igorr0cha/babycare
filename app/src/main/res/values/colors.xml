@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bg_color">#FFFEE9</color>
     <color name="strong_pink">#FFAFBA</color>
+    <color name="strong_green">#9EB19D</color>
+    <color name="green">#CADABD</color>
 </resources>
