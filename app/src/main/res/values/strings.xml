@@ -5,5 +5,6 @@
 
     <string name="total_time">Sono Total</string>
     <string name="sonho_mais_long">Sono mais longo</string>
+    <string name="sonho_mais_curt">Sono mais curto</string>
     <string name="sonho_media">Media de Sono</string>
 </resources>
