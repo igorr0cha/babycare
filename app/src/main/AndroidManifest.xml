@@ -15,6 +15,7 @@
         <activity
             android:name=".Login"
             android:exported="false" />
+
         <activity
             android:name=".ReportActivity"
             android:exported="true">

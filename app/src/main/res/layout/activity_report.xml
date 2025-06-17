@@ -9,7 +9,6 @@
     tools:context=".ReportActivity">
 
     <ImageView
-        android:id="@+id/imageView6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="-22dp"
@@ -59,8 +58,7 @@
         android:gravity="center|center_vertical"
         android:text="Histórico de Refeições"
         android:textAlignment="center"
-        android:textColor="#070606"
-        android:textColorLink="#020101"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -71,11 +69,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:id="@+id/relatoryScroll"
+        android:id="@+id/sleepScroll"
         style="@android:style/Widget.DeviceDefault.Light.ScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:overScrollMode="never"
+        android:padding="20dp"
         android:scrollbarStyle="outsideInset"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -84,6 +83,134 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/babysleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/leaguespartan_semibold"
+                android:text="Sono de kebler hoje"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/sleepinformation"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="5dp"
+                android:clipChildren="false"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:id="@+id/sleepdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/sleepend"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/leaguespartan_regular"
+                        android:gravity="center_vertical"
+                        android:text="Fim do sono noturno: 06:43"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/sleeptime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/leaguespartan_regular"
+                        android:gravity="center_vertical"
+                        android:text="21:00 → 06:00 ( Noturno )"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/sleeptimes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/leaguespartan_regular"
+                        android:gravity="center_vertical"
+                        android:text="Dormiu 3 vezes hoje"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/totalsleeptoday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4">
+
+                    <ImageView
+                        android:id="@+id/totalsleepbg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/information_box"
+                        tools:srcCompat="@drawable/information_box" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/leaguespartan_regular"
+                        android:text="@string/total_time"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/totalsleepbg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.100000024" />
+
+                    <TextView
+                        android:id="@+id/totaltimeslept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/leaguespartan_regular"
+                        android:text="14h"
+                        android:textColor="@color/black"
+                        android:textSize="40sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/totalsleepbg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/totalsleepbg" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/leaguespartan_semibold"
+                android:text="Sono de kebler nos ultimos 7 dias"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
     </ScrollView>
 
     <ImageView
@@ -110,7 +237,7 @@
         app:srcCompat="@drawable/relatory_selected" />
 
     <ImageView
-        android:id="@+id/sleepIcon"
+        android:id="@+id/foodIcon"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerInside"

@@ -2,4 +2,7 @@
     <string name="app_name">BabyCare</string>
     <string name="signin"><![CDATA[This is an <u>underline</u>.]]></string>
     <string name="default_web_client_id">674641182686-c8une6reibnaa64n13p3j6jasp7dnff3.apps.googleusercontent.com</string>
+
+    <string name="total_time">Sono Total</string>
+
 </resources>
