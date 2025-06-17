@@ -4,5 +4,6 @@
     <string name="default_web_client_id">674641182686-c8une6reibnaa64n13p3j6jasp7dnff3.apps.googleusercontent.com</string>
 
     <string name="total_time">Sono Total</string>
-
+    <string name="sonho_mais_long">Sono mais longo</string>
+    <string name="sonho_media">Media de Sono</string>
 </resources>
