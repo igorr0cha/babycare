@@ -30,17 +30,6 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="361dp"
-        android:layout_height="500dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/relatory_bg"
-        tools:srcCompat="@drawable/relatory_bg" />
-
-    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="223dp"
         android:layout_height="57dp"
@@ -68,6 +57,17 @@
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="361dp"
+        android:layout_height="500dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/relatory_bg"
+        tools:srcCompat="@drawable/relatory_bg" />
+
     <ScrollView
         android:id="@+id/sleepScroll"
         style="@android:style/Widget.DeviceDefault.Light.ScrollView"
@@ -78,12 +78,14 @@
         android:paddingRight="14dp"
         android:paddingBottom="10dp"
         android:scrollbarStyle="outsideInset"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -217,7 +219,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:clipChildren="true">
 
                 <ImageView
                     android:id="@+id/graphbg"
@@ -228,12 +231,12 @@
                     app:srcCompat="@drawable/graph_bg" />
 
                 <com.jjoe64.graphview.GraphView
-                    android:id="@+id/graph"
+                    android:id="@+id/sleepgraph"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="12dp"
                     android:layout_marginBottom="16dp"
                     app:layout_constraintBottom_toBottomOf="@+id/graphbg"
                     app:layout_constraintEnd_toEndOf="@+id/graphbg"
