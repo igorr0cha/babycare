@@ -64,6 +64,8 @@ class ReportActivity : AppCompatActivity() {
         setSelectedButton(true)
     }
 
+
+
     private fun loadSleepSessions() {
         val db = databaseHelper.readableDatabase
 
