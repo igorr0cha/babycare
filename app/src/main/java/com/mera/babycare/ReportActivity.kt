@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.jjoe64.graphview.DefaultLabelFormatter
 import com.jjoe64.graphview.GraphView
+import com.jjoe64.graphview.GridLabelRenderer
 import com.jjoe64.graphview.series.DataPoint
 import com.jjoe64.graphview.series.LineGraphSeries
 
@@ -91,44 +92,57 @@ class ReportActivity : AppCompatActivity() {
 
             val series = LineGraphSeries(
                 arrayOf(
-                    DataPoint(0.0, 2.0),
                     DataPoint(1.0, 5.0),
                     DataPoint(2.0, 3.0),
                     DataPoint(3.0, 2.0),
                     DataPoint(4.0, 6.0),
                     DataPoint(5.0, 6.0),
                     DataPoint(6.0, 6.0),
+                    DataPoint(7.0, 6.0),
                 )
             )
             graph.addSeries(series)
             series.color = Color.parseColor("#FFCBC5")
 
+            val weekdays = arrayOf("", "S", "T", "Q", "Q", "S", "S", "D") // Index 0 is empty
+
             graph.gridLabelRenderer.labelFormatter = object : DefaultLabelFormatter() {
+                override fun formatLabel(value: Double, isValueX: Boolean): String {
+                    return if (isValueX) {
+                        val index = value.toInt()
+                        if (index in 1..7) weekdays[index] else ""
+                    } else {
+                        super.formatLabel(value, isValueX)
+                    }
+                }
+            }
+            /*graph.gridLabelRenderer.labelFormatter = object : DefaultLabelFormatter() {
                 private val weekdays = arrayOf("Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom")
 
                 override fun formatLabel(value: Double, isValueX: Boolean): String {
                     return if (isValueX) {
-                        // Convert X-axis numbers to month names
                         if (value >= 0 && value < weekdays.size) {
                             weekdays[value.toInt()]
                         } else {
                             ""
                         }
                     } else {
-                        // Keep Y-axis as numbers (or customize if needed)
                         super.formatLabel(value, isValueX)
                     }
                 }
-            }
-
-
+            }*/
+            graph.viewport.setMinX(0.5)  // Small margin before first point
+            graph.viewport.setMaxX(7.5)  // Small margin before first point
+            graph.viewport.isXAxisBoundsManual = true
+            graph.viewport.isYAxisBoundsManual = true
             graph.gridLabelRenderer.padding = 32
-            graph.gridLabelRenderer.numHorizontalLabels = 7
-
+            //graph.gridLabelRenderer.setHorizontalLabelsAngle(45)
+            graph.gridLabelRenderer.numHorizontalLabels = 8
             graph.gridLabelRenderer.verticalAxisTitle = "Horas"
             graph.gridLabelRenderer.verticalAxisTitleTextSize = 30f // in SP
             graph.gridLabelRenderer.verticalAxisTitle
             graph.gridLabelRenderer.verticalAxisTitleColor = Color.BLACK
+            graph.gridLabelRenderer.gridStyle = GridLabelRenderer.GridStyle.HORIZONTAL
 
             sleepScroll.visibility = View.VISIBLE
             // Aqui você pode adicionar lógica para mostrar o conteúdo de sono
